@@ -13,6 +13,6 @@ int main()
    cout << endl;
    cout << "My favorite anime character is Naruto Uzumaki" << endl;
    cout << "My favorite pokemon is Gigalith" << endl;
-   cout << "My favorite band is Pink Floyd" << endl; 
+   cout << "My favorite band is Pink Floyd" << endl;
    return 0;
 }
