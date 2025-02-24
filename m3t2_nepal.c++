@@ -1,7 +1,3 @@
-// M3T2 starting point
-
-
-
 #include <iostream>
 // for random
 #include <cmath>    
