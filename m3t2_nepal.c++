@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-    const int SIDES_DIE_1 = 10; // yours will differ!
+    const int SIDES_DIE_1 = 10; 
     const int SIDES_DIE_2 = 20;
     const int TO_HIT = 80;
     //int seed = 88;
