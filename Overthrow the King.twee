@@ -1,0 +1,272 @@
+:: StoryTitle
+Overthrow the King
+
+
+:: StoryData
+{
+  "ifid": "94325960-1EBD-4987-AB19-2E7EE94F1B6B",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start",
+  "zoom": 0.6
+}
+
+
+:: AssassinKill {"position":"300,500","size":"100,100"}
+
+
+
+:: AssassinPoison {"position":"500,500","size":"100,100"}
+
+
+
+:: AssassinStart {"position":"100,500","size":"100,100"}
+You are a shadow in the night, trained to kill. Your skills are unmatched, but your past is a mystery.
+
+<<set $character to "Assassin">>
+
+[[Continue|Continue]]
+
+
+:: Character Select {"position":"300,0","size":"100,100"}
+Choose your character:
+
+[[Peasant|PeasantStart]]
+[[Assassin|AssassinStart]]
+[[Priest|PriestStart]]
+[[Knight|KnightStart]]
+[[Nobleman|NobleStart]]
+[[Royal Heir|HeirStart]]
+
+
+:: Continue {"position":"500,0","size":"100,100"}
+(if: $character is "Peasant") [
+How will you proceed?
+[[Rally the people for a rebellion|PeasantRebellion]]
+[[Weaken the kingdom from within|PeasantSabatoge]]
+]
+
+(if: $character is "Assassin") [
+Your benefactor tasks you with killing the king.
+How will you proceed?
+[[Attempt to assassinate the king|AssassinKill]]
+[[Poison the king slowly|AssassinPoison]]
+]
+
+(if: $character is "Preist") [
+You seem to see a lack of spiritual connection within the kingdom.
+How will you proceed?
+]
+
+(if: $character is "Knight") [
+[[Lead the army in a coup|KnightCoup]]
+[[Spy on the king to eventually rule|KnightSpy]]
+]
+
+(if: $character is "Noble") [
+How will you proceed?
+[[Manipulate the court against the king|NobleManipulate]]
+[[Control the economy to force his downfall|NobleEconomy]]
+[[Blackmail the king into stepping down|NobleBlackmail]]
+]
+
+(if: $character is "Heir") [
+How will you proceed?
+[[Claim the throne as rightful ruler|HeirClaim]]
+[[Pretend loyalty while secretly plotting|HeirPlot]]
+[[Win over the people to force abdication|HeirPeople]]
+]
+
+
+
+
+
+
+:: DoMission {"position":"1200,200","size":"100,100"}
+You successfully gain Dan Krest’s trust and return to the king with information. Your power and trust grow, but you know you're playing a dangerous game.
+
+Now, you must choose your next move:
+
+[[Open Rebellion|OpenRebellion]] Stage a rebellion alongside the people.
+[[Subterfuge|Subterfuge]] Manipulate and decieve the nobility to get your way.
+[[Infiltrate|Infiltrate]] Infiltrate the castle and assassinate the king.
+
+
+:: DodgeFail {"position":"1100,600","size":"100,100"}
+You dodge but miss your chance to strike. The king retaliates and kills you.
+
+You failed...
+
+[[Restart|Start]]
+
+
+
+:: Exit Game {"position":"100,200","size":"100,100"}
+You exited the game!
+
+
+:: HeirClaim {"position":"300,1300","size":"100,100"}
+
+
+
+:: HeirPeople {"position":"700,1300","size":"100,100"}
+
+
+
+:: HeirPlot {"position":"500,1300","size":"100,100"}
+
+
+
+:: HeirStart {"position":"100,1300","size":"100,100"}
+The rightful successor to the throne. Will you continue your family's legacy or bring a new era?
+
+<<set $character to "Heir">>
+
+[[Continue|Continue]]
+
+
+:: Infiltrate {"position":"1500,400","size":"100,100"}
+You try to sneak into the castle, but the guards catch you. You are imprisoned, and the rebellion collapses.
+
+You failed...
+
+[[Restart|Start]]
+
+
+:: KnightCoup {"position":"300,900","size":"100,100"}
+
+
+
+:: KnightSpy {"position":"900,25","size":"100,100"}
+The Royal Betrayal Storyline:
+
+You must now choose to try and convince the royal family or the noblemen and lords.
+
+[[Convince the Royal Family|RoyalFail]]
+[[Convince the Noblemen|NobleSuccess]]
+
+
+:: KnightStart {"position":"100,900","size":"100,100"}
+A warrior sworn to serve, but where does your loyalty truly lie? With honor, strength, and strategy, you must make your choice.
+
+<<set $character to "Knight">>
+
+[[Continue|Continue]]
+
+
+:: LieKing {"position":"1450,50","size":"100,100"}
+You decided to lie, but the king knew all along. This was a test, and you failed.
+
+You are imprisoned indefinitely.
+
+You failed...
+
+
+:: NobleBlackmail {"position":"300,1100","size":"100,100"}
+
+
+
+:: NobleEconomy {"position":"500,1100","size":"100,100"}
+
+
+
+:: NobleManipulate {"position":"700,1100","size":"100,100"}
+
+
+
+:: NobleStart {"position":"100,1100","size":"100,100"}
+Born into privilege, you have the ear of the court. Will you use your influence to reform or to overthrow?
+
+<<set $character to "Nobleperson">>
+
+[[Continue|Continue]]
+
+
+:: NobleSuccess {"position":"1200,25","size":"100,100"}
+It's not what you know, it's who you can buy.
+
+The noblemen agree to support your coup. Later, the king sends you on a mission to investigate a rebellion at The Quiet Barrel, a pub. You must find Dan Krest and report back.
+
+Do you:
+
+[[Complete the mission|DoMission]]
+[[Lie to the king|LieKing]]
+
+
+:: OpenRebellion {"position":"1075,400","size":"100,100"}
+You attempt to rally the people, but the noblemen betray you, siding with the king.
+
+Without support, you are executed for treason.
+
+You failed...
+
+[[Restart|Start]]
+
+
+
+:: PeasantRebellion {"position":"300,350","size":"100,100"}
+
+
+
+:: PeasantSabatoge {"position":"500,350","size":"100,100"}
+
+
+
+:: PeasantStart {"position":"100,350","size":"100,100"}
+You are a simple peasant, tired of the king’s cruelty. You have little power but great determination.
+
+<<set $character to "Peasant">>
+
+[[Continue|Continue]]
+
+
+:: PriestStart {"position":"100,700","size":"100,100"}
+As a Priest, you wield spiritual influence over the people and the nobility alike. You seek to change the kingdom through faith or force.
+
+<<set $character to "Priest">>
+
+[[Continue|Continue]]
+
+
+
+
+
+:: RoyalFail {"position":"900,200","size":"100,100"}
+I guess blood is thicker than water...
+
+The royal family listens to your grievances but betrays you to the king. You are executed publicly, and the rebellion is stunted.
+
+You failed...
+
+[[Restart|Start]]
+
+
+
+:: StabWin {"position":"1400,600","size":"100,100"}
+Your blade strikes true, and the king falls. The kingdom is now under your control.
+
+You have won!
+
+[[Restart|Start]]
+
+
+
+:: Start {"position":"100,0","size":"100,100"}
+
+You live in a grand kingdom. However, your king is cruel and vindictive. The people have given you a mission: remove him from power.
+
+(set: $class to "knight")
+Do you think you have what it takes?
+
+[[Yes|Character Select]]
+[[No|Exit Game]]
+
+
+
+:: Subterfuge {"position":"1300,400","size":"100,100"}
+You work in the shadows, manipulating the nobility and weakening the king's power. Eventually, you challenge him to a duel.
+
+As he charges, do you:
+
+[[Dodge|DodgeFail]]
+[[Hold your blade and stab|StabWin]]
