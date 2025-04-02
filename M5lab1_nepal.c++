@@ -169,5 +169,4 @@ void choice_go_to_basement()
   cout << "Which will you pick? \n";
   
   int choice = get_choice(2);
-  
 }
